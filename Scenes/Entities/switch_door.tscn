@@ -1,0 +1,24 @@
+[gd_scene load_steps=5 format=3 uid="uid://bi260ux60kwtw"]
+
+[ext_resource type="Script" uid="uid://bo1fq0atw66eu" path="res://Scripts/switch_block.gd" id="1_64ik2"]
+[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_8pvhp"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gcodw"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eo2nk"]
+atlas = ExtResource("2_8pvhp")
+region = Rect2(32, 40, 16, 8)
+filter_clip = true
+
+[node name="switch block" type="StaticBody2D"]
+collision_layer = 3
+script = ExtResource("1_64ik2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_gcodw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_eo2nk")
+hframes = 2
+frame = 1

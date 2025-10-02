@@ -1,0 +1,19 @@
+[gd_scene load_steps=5 format=3 uid="uid://c7u5otjn1wwts"]
+
+[ext_resource type="Script" uid="uid://gme54osifi0m" path="res://Scripts/locked_door.gd" id="1_pl8yw"]
+[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_67mci"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dm4t5"]
+atlas = ExtResource("2_67mci")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5vrh0"]
+
+[node name="Locked door" type="CharacterBody2D"]
+script = ExtResource("1_pl8yw")
+metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = SubResource("AtlasTexture_dm4t5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_5vrh0")

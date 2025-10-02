@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr1mlob46wd6c"]
+
+[ext_resource type="Script" uid="uid://c0jf66661bb3g" path="res://Scripts/Lever.gd" id="1_iyycw"]
+[ext_resource type="Texture2D" uid="uid://bicopmbyrptdi" path="res://Resources/Textures/switch.png" id="2_e7yxl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eaom8"]
+size = Vector2(20, 14)
+
+[node name="Lever" type="CharacterBody2D"]
+script = ExtResource("1_iyycw")
+metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("2_e7yxl")
+hframes = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_eaom8")

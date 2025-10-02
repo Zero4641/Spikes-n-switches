@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://b3qm2frdau3c4"]
+
+[ext_resource type="PackedScene" uid="uid://bmjx3f0immib7" path="res://Scenes/Entities/switch_block.tscn" id="1_c3aie"]
+[ext_resource type="PackedScene" uid="uid://dxbuqwt6sfapc" path="res://Scenes/Entities/player.tscn" id="1_fhg0x"]
+[ext_resource type="PackedScene" uid="uid://cib26lkbmn6lo" path="res://Scenes/Entities/push_block.tscn" id="2_8gjsn"]
+[ext_resource type="PackedScene" uid="uid://cr1mlob46wd6c" path="res://Scenes/Entities/lever.tscn" id="3_isw7l"]
+
+[node name="Dev room" type="Node2D"]
+
+[node name="Level container" type="Node2D" parent="."]
+
+[node name="switch block" parent="Level container" instance=ExtResource("1_c3aie")]
+position = Vector2(140, 279)
+scale = Vector2(1.0005, 0.986232)
+
+[node name="switch block2" parent="Level container" instance=ExtResource("1_c3aie")]
+position = Vector2(194, 278)
+scale = Vector2(1.0005, 0.986232)
+unlock_state = false
+
+[node name="Player" parent="Level container" instance=ExtResource("1_fhg0x")]
+position = Vector2(103, 175)
+motion_mode = 1
+
+[node name="Push block" parent="Level container" instance=ExtResource("2_8gjsn")]
+position = Vector2(177, 174)
+
+[node name="Lever" parent="Level container" instance=ExtResource("3_isw7l")]
+position = Vector2(115, 238)
+
+[node name="Lever2" parent="Level container" instance=ExtResource("3_isw7l")]
+position = Vector2(168, 223)
