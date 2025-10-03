@@ -6,7 +6,7 @@ var state := false
 func _ready() -> void:
 	if player != null:
 		player.interact.connect(_on_player_interact)
-	on_switch_toggle(SaveManager.get_switch_state())
+	on_switch_toggle(SaveManager.switch_state)
 	for child in get_parent().get_children():
 		if (child != self) and child.has_signal("switch_toggle"):
 			child.switch_toggle.connect(on_switch_toggle)
@@ -16,7 +16,7 @@ func on_switch_toggle(next_state: bool) -> void:
 	%Sprite2D.frame = state
 
 func _on_player_interact(_input_dir:Vector2) -> void:
-	if interactable and in_trigger:
+	if interactable and in_trigger and !player.dead:
 		switch()
 
 func switch() -> void:

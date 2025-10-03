@@ -1,0 +1,46 @@
+[gd_scene load_steps=7 format=3 uid="uid://dehdfunue4e4r"]
+
+[ext_resource type="Texture2D" uid="uid://bhc4m6ecc5f7q" path="res://Resources/Textures/Blob.png" id="1_qnjw1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lfuo6"]
+atlas = ExtResource("1_qnjw1")
+region = Rect2(0, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yi8h7"]
+atlas = ExtResource("1_qnjw1")
+region = Rect2(8, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_quskt"]
+atlas = ExtResource("1_qnjw1")
+region = Rect2(16, 16, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jfja"]
+atlas = ExtResource("1_qnjw1")
+region = Rect2(24, 16, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_66mmq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lfuo6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yi8h7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_quskt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jfja")
+}],
+"loop": false,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Dead body" type="AnimatedSprite2D"]
+scale = Vector2(2.5, 2.5)
+sprite_frames = SubResource("SpriteFrames_66mmq")
+autoplay = "default"
+frame = 3
+frame_progress = 1.0

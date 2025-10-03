@@ -2,7 +2,7 @@ extends Interactable
 
 var pushing := false
 func _on_player_interact(input_dir:Vector2) -> void:
-	if !pushing and interactable and !player.Idle and in_trigger:
+	if !pushing and interactable and !player.Idle and in_trigger and !player.dead:
 		push(snap_to_cardinal(input_dir))
 
 var target_pos := Vector2.ZERO

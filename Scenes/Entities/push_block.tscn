@@ -10,6 +10,8 @@ atlas = ExtResource("2_cnpnm")
 region = Rect2(8, 0, 8, 8)
 
 [node name="Push block" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 7
 script = ExtResource("1_xwjr6")
 metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
 

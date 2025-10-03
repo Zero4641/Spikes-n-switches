@@ -1,13 +1,20 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3qm2frdau3c4"]
+[gd_scene load_steps=9 format=3 uid="uid://b3qm2frdau3c4"]
 
 [ext_resource type="PackedScene" uid="uid://bmjx3f0immib7" path="res://Scenes/Entities/switch_block.tscn" id="1_c3aie"]
 [ext_resource type="PackedScene" uid="uid://dxbuqwt6sfapc" path="res://Scenes/Entities/player.tscn" id="1_fhg0x"]
 [ext_resource type="PackedScene" uid="uid://cib26lkbmn6lo" path="res://Scenes/Entities/push_block.tscn" id="2_8gjsn"]
+[ext_resource type="PackedScene" uid="uid://bi260ux60kwtw" path="res://Scenes/Entities/switch_door.tscn" id="2_ltr2l"]
 [ext_resource type="PackedScene" uid="uid://cr1mlob46wd6c" path="res://Scenes/Entities/lever.tscn" id="3_isw7l"]
+[ext_resource type="PackedScene" uid="uid://c7u5otjn1wwts" path="res://Scenes/Entities/locked_door.tscn" id="5_wj7fh"]
+[ext_resource type="PackedScene" uid="uid://dfl6wca3lhtfn" path="res://Scenes/Entities/pickup.tscn" id="6_4x1wv"]
+[ext_resource type="PackedScene" uid="uid://f0gs7ukwwno1" path="res://Scenes/Entities/spikes.tscn" id="6_ltr2l"]
 
 [node name="Dev room" type="Node2D"]
 
 [node name="Level container" type="Node2D" parent="."]
+
+[node name="switch block3" parent="Level container" instance=ExtResource("2_ltr2l")]
+position = Vector2(176, 391)
 
 [node name="switch block" parent="Level container" instance=ExtResource("1_c3aie")]
 position = Vector2(140, 279)
@@ -18,10 +25,6 @@ position = Vector2(194, 278)
 scale = Vector2(1.0005, 0.986232)
 unlock_state = false
 
-[node name="Player" parent="Level container" instance=ExtResource("1_fhg0x")]
-position = Vector2(103, 175)
-motion_mode = 1
-
 [node name="Push block" parent="Level container" instance=ExtResource("2_8gjsn")]
 position = Vector2(177, 174)
 
@@ -30,3 +33,38 @@ position = Vector2(115, 238)
 
 [node name="Lever2" parent="Level container" instance=ExtResource("3_isw7l")]
 position = Vector2(168, 223)
+
+[node name="Locked door" parent="Level container" instance=ExtResource("5_wj7fh")]
+position = Vector2(258, 196)
+
+[node name="Pickup" parent="Level container" instance=ExtResource("6_4x1wv")]
+position = Vector2(257, 245)
+Pickup_type = "Health"
+
+[node name="Pickup2" parent="Level container" instance=ExtResource("6_4x1wv")]
+position = Vector2(299, 245)
+
+[node name="Pickup4" parent="Level container" instance=ExtResource("6_4x1wv")]
+position = Vector2(300, 292)
+ID = 1
+
+[node name="Pickup3" parent="Level container" instance=ExtResource("6_4x1wv")]
+position = Vector2(342, 246)
+Pickup_type = "Final Key"
+
+[node name="Spikes" parent="Level container" instance=ExtResource("6_ltr2l")]
+position = Vector2(211, 133)
+
+[node name="Locked door3" parent="Level container" instance=ExtResource("5_wj7fh")]
+position = Vector2(343, 195)
+boss_door = true
+
+[node name="Locked door2" parent="Level container" instance=ExtResource("5_wj7fh")]
+position = Vector2(298, 196)
+ID = 1
+
+[node name="Body container" type="Node2D" parent="Level container"]
+
+[node name="Player" parent="Level container" instance=ExtResource("1_fhg0x")]
+position = Vector2(103, 175)
+motion_mode = 1

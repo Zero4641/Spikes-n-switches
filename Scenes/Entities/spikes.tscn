@@ -1,0 +1,32 @@
+[gd_scene load_steps=6 format=3 uid="uid://f0gs7ukwwno1"]
+
+[ext_resource type="Script" uid="uid://da8j7klkpvvx8" path="res://Scripts/Spikes.gd" id="1_urhli"]
+[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_tfjtd"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_urhli"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6dr5w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eufu1"]
+atlas = ExtResource("2_tfjtd")
+region = Rect2(32, 40, 8, 8)
+filter_clip = true
+
+[node name="Spikes" type="Area2D"]
+script = ExtResource("1_urhli")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_urhli")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_6dr5w")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(2.5, 2.5)
+texture = SubResource("AtlasTexture_eufu1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
