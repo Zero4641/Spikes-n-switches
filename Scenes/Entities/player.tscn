@@ -528,7 +528,7 @@ transitions = ["Start", "Alive idle", SubResource("AnimationNodeStateMachineTran
 graph_offset = Vector2(-23, -72)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_nqm6o"]
-size = Vector2(72, 72)
+size = Vector2(60, 60)
 
 [sub_resource type="LabelSettings" id="LabelSettings_ofjh0"]
 font = ExtResource("4_a1rq5")

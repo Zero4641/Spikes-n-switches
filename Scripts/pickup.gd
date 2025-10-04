@@ -24,7 +24,6 @@ func _on_body_entered(body: Node2D) -> void:
 			"Health":
 				if body.dead:
 					body.live()
-					queue_free()
 			"Key":
 				if !body.dead:
 					SaveManager.collect_key(key_id)

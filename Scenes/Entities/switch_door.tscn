@@ -129,7 +129,7 @@ y_sort_enabled = true
 scale = Vector2(0.409, 0.409)
 texture = ExtResource("2_64ik2")
 hframes = 7
-vframes = 3
+vframes = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_gcodw")

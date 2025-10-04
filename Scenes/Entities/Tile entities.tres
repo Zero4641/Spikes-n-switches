@@ -1,10 +1,12 @@
-[gd_resource type="TileSet" load_steps=5 format=3 uid="uid://bhxgf3sur563y"]
+[gd_resource type="TileSet" load_steps=6 format=3 uid="uid://bhxgf3sur563y"]
 
+[ext_resource type="PackedScene" uid="uid://dfl6wca3lhtfn" path="res://Scenes/Entities/pickup.tscn" id="1_7nm2q"]
 [ext_resource type="PackedScene" uid="uid://f0gs7ukwwno1" path="res://Scenes/Entities/spikes.tscn" id="1_h3q17"]
 [ext_resource type="PackedScene" uid="uid://cib26lkbmn6lo" path="res://Scenes/Entities/push_block.tscn" id="2_7nm2q"]
 [ext_resource type="PackedScene" uid="uid://cwbyvnme2wigh" path="res://Scenes/Entities/block_stopper.tscn" id="3_pq6po"]
 
 [sub_resource type="TileSetScenesCollectionSource" id="TileSetScenesCollectionSource_5hf6n"]
+scenes/1/scene = ExtResource("1_7nm2q")
 scenes/2/scene = ExtResource("1_h3q17")
 scenes/3/scene = ExtResource("2_7nm2q")
 scenes/4/scene = ExtResource("3_pq6po")

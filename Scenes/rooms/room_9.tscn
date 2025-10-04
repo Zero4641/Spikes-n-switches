@@ -41,13 +41,3 @@ position = Vector2(1624, 616)
 
 [node name="Pickup3" parent="." instance=ExtResource("4_ehvr5")]
 position = Vector2(1176, 616)
-
-[connection signal="body_entered" from="TileMapLayer2/Spikes" to="TileMapLayer2/Spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284572" to="TileMapLayer2/@Area2D@284572" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284573" to="TileMapLayer2/@Area2D@284573" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284574" to="TileMapLayer2/@Area2D@284574" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284575" to="TileMapLayer2/@Area2D@284575" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284576" to="TileMapLayer2/@Area2D@284576" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284577" to="TileMapLayer2/@Area2D@284577" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284578" to="TileMapLayer2/@Area2D@284578" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@284579" to="TileMapLayer2/@Area2D@284579" method="_on_body_entered"]

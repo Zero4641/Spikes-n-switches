@@ -33,13 +33,3 @@ Scroll_type = "Right"
 position = Vector2(1960, 616)
 next_room_path = "uid://b220qgx1dqw86"
 Scroll_type = "Left"
-
-[connection signal="body_entered" from="TileMapLayer2/Spikes" to="TileMapLayer2/Spikes" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210896" to="TileMapLayer2/@Area2D@210896" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210897" to="TileMapLayer2/@Area2D@210897" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210898" to="TileMapLayer2/@Area2D@210898" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210899" to="TileMapLayer2/@Area2D@210899" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210900" to="TileMapLayer2/@Area2D@210900" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210901" to="TileMapLayer2/@Area2D@210901" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210902" to="TileMapLayer2/@Area2D@210902" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer2/@Area2D@210903" to="TileMapLayer2/@Area2D@210903" method="_on_body_entered"]
