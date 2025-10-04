@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://bmjx3f0immib7"]
 
 [ext_resource type="Script" uid="uid://bo1fq0atw66eu" path="res://Scripts/switch_block.gd" id="1_t28ro"]
-[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_6sp44"]
+[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/placeholder/Tile atlas.png" id="2_6sp44"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_t28ro"]
 

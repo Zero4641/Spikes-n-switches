@@ -1,23 +1,25 @@
 [gd_scene load_steps=5 format=3 uid="uid://cib26lkbmn6lo"]
 
 [ext_resource type="Script" uid="uid://deam7863c4mr7" path="res://Scripts/push_block.gd" id="1_xwjr6"]
-[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_cnpnm"]
+[ext_resource type="Texture2D" uid="uid://brtlw8w22h8nn" path="res://Resources/Textures/Tiles.png" id="2_xwjr6"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7870t"]
+size = Vector2(110, 110)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5n4ej"]
-atlas = ExtResource("2_cnpnm")
-region = Rect2(8, 0, 8, 8)
+atlas = ExtResource("2_xwjr6")
+region = Rect2(1600, 640, 320, 320)
 
 [node name="Push block" type="CharacterBody2D"]
-collision_layer = 2
+collision_layer = 3
 collision_mask = 7
 script = ExtResource("1_xwjr6")
 metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+y_sort_enabled = true
 shape = SubResource("RectangleShape2D_7870t")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(2.5, 2.5)
+scale = Vector2(0.35, 0.35)
 texture = SubResource("AtlasTexture_5n4ej")

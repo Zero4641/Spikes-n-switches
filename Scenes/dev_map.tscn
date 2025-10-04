@@ -1,0 +1,39 @@
+[gd_scene load_steps=10 format=3 uid="uid://bcbe7xshkbja7"]
+
+[ext_resource type="PackedScene" uid="uid://hqpx3bfwvv2b" path="res://Scenes/rooms/room_1.tscn" id="1_a3com"]
+[ext_resource type="PackedScene" uid="uid://cb3pxvhel5or6" path="res://Scenes/rooms/room_2.tscn" id="2_toig6"]
+[ext_resource type="PackedScene" uid="uid://dqyjn83wloamp" path="res://Scenes/rooms/room_3.tscn" id="3_2hqd6"]
+[ext_resource type="PackedScene" uid="uid://ccu3ce4byten3" path="res://Scenes/rooms/room_4.tscn" id="4_65yvu"]
+[ext_resource type="PackedScene" uid="uid://b220qgx1dqw86" path="res://Scenes/rooms/room_5.tscn" id="5_65yvu"]
+[ext_resource type="PackedScene" uid="uid://bi22udsi45w0m" path="res://Scenes/rooms/room_6.tscn" id="6_d1gr3"]
+[ext_resource type="PackedScene" uid="uid://dr635obonkm6t" path="res://Scenes/rooms/room_7.tscn" id="7_p5o5x"]
+[ext_resource type="PackedScene" uid="uid://cuqln535ugbm3" path="res://Scenes/rooms/room_8.tscn" id="8_s5a5p"]
+[ext_resource type="PackedScene" uid="uid://hgm1r0k5npky" path="res://Scenes/rooms/room_9.tscn" id="9_nblix"]
+
+[node name="Dev map" type="Node2D"]
+
+[node name="Room 1" parent="." instance=ExtResource("1_a3com")]
+
+[node name="room 2" parent="." instance=ExtResource("2_toig6")]
+position = Vector2(1904, 0)
+
+[node name="room 3" parent="." instance=ExtResource("3_2hqd6")]
+position = Vector2(1904, 1232)
+
+[node name="room 4" parent="." instance=ExtResource("4_65yvu")]
+position = Vector2(3808, 0)
+
+[node name="room 5" parent="." instance=ExtResource("5_65yvu")]
+position = Vector2(5712, 0)
+
+[node name="room 6" parent="." instance=ExtResource("6_d1gr3")]
+position = Vector2(5712, -1232)
+
+[node name="Room 7" parent="." instance=ExtResource("7_p5o5x")]
+position = Vector2(7616, 0)
+
+[node name="room 8" parent="." instance=ExtResource("8_s5a5p")]
+position = Vector2(5712, 1232)
+
+[node name="room 9" parent="." instance=ExtResource("9_nblix")]
+position = Vector2(7616, 1232)

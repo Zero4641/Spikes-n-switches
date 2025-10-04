@@ -8,7 +8,7 @@ var switch_state := false
 
 signal key_collected(keys:int)
 signal key_used(keys:int)
-signal final_key_collected()
+signal final_key_collected(final_key:bool)
 
 # Set a door's unlocked state
 func set_door_unlocked(door_id: String, unlocked: bool) -> void:
@@ -22,16 +22,17 @@ func is_door_unlocked(door_id: String) -> bool:
 func collect_key(key_id: String) -> void:
 	keys += 1
 	keys_collected[key_id] = true
-	key_collected.emit(keys_collected)
+	key_collected.emit(keys)
+	print(keys)
 
 func collect_final_key(key_id: String) -> void:
 	final_key = true
 	keys_collected[key_id] = true
-	final_key_collected.emit()
+	final_key_collected.emit(final_key)
 
 func use_key() -> void:
 	keys -= 1
-	key_used.emit(keys_collected)
+	key_used.emit(keys)
 
 func has_key(key_id: String) -> bool:
 	return keys_collected.get(key_id, false)

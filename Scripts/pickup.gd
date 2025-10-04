@@ -1,6 +1,6 @@
 extends Area2D
 
-@export_enum("Health", "Key", "Final Key") var Pickup_type = "Key"
+@export_enum("Health", "Key", "Final Key") var Pickup_type = "Health"
 
 @export var ID : int
 
@@ -9,7 +9,7 @@ func _ready() -> void:
 	match Pickup_type:
 		"Key":
 			key_id = "Key:" + str(ID)
-			%Sprite2D.frame = 1
+			%Sprite2D.frame = 0
 			if SaveManager.has_key(key_id):
 				queue_free()
 		"Final Key":

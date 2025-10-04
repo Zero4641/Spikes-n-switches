@@ -1,23 +1,89 @@
-[gd_scene load_steps=4 format=3 uid="uid://cr1mlob46wd6c"]
+[gd_scene load_steps=8 format=3 uid="uid://cr1mlob46wd6c"]
 
 [ext_resource type="Script" uid="uid://c0jf66661bb3g" path="res://Scripts/Lever.gd" id="1_iyycw"]
-[ext_resource type="Texture2D" uid="uid://bicopmbyrptdi" path="res://Resources/Textures/switch.png" id="2_e7yxl"]
+[ext_resource type="Texture2D" uid="uid://cn8qdktw0q6l8" path="res://Resources/Textures/Beta/Lever.png" id="2_iyycw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaom8"]
-size = Vector2(20, 14)
+size = Vector2(108, 42)
+
+[sub_resource type="Animation" id="Animation_eaom8"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_0wja7"]
+resource_name = "flick_off"
+length = 0.208338
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.0833333, 0.125, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
+}
+
+[sub_resource type="Animation" id="Animation_e7yxl"]
+resource_name = "flick_on"
+length = 0.208338
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.0833333, 0.125, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_qeikp"]
+_data = {
+&"RESET": SubResource("Animation_eaom8"),
+&"flick_off": SubResource("Animation_e7yxl"),
+&"flick_on": SubResource("Animation_0wja7")
+}
 
 [node name="Lever" type="CharacterBody2D"]
+y_sort_enabled = true
 collision_layer = 2
 collision_mask = 2
 script = ExtResource("1_iyycw")
 metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 3)
-shape = SubResource("RectangleShape2D_eaom8")
-
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-scale = Vector2(2.5, 2.5)
-texture = ExtResource("2_e7yxl")
-hframes = 2
+z_index = 1
+y_sort_enabled = true
+scale = Vector2(0.234, 0.229)
+texture = ExtResource("2_iyycw")
+hframes = 4
+vframes = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 21)
+shape = SubResource("RectangleShape2D_eaom8")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+&"": SubResource("AnimationLibrary_qeikp")
+}

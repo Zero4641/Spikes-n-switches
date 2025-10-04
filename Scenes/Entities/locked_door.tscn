@@ -1,18 +1,57 @@
-[gd_scene load_steps=6 format=3 uid="uid://c7u5otjn1wwts"]
+[gd_scene load_steps=9 format=3 uid="uid://c7u5otjn1wwts"]
 
 [ext_resource type="Script" uid="uid://gme54osifi0m" path="res://Scripts/locked_door.gd" id="1_pl8yw"]
-[ext_resource type="Texture2D" uid="uid://chnnfndmjprwi" path="res://Resources/Textures/Tile atlas.png" id="2_67mci"]
+[ext_resource type="Texture2D" uid="uid://dn2artdj3is6i" path="res://Resources/Textures/door.png" id="2_pl8yw"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl8yw"]
+size = Vector2(112, 112)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5vrh0"]
+size = Vector2(112, 112)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dm4t5"]
-atlas = ExtResource("2_67mci")
-region = Rect2(24, 0, 24, 8)
-filter_clip = true
+[sub_resource type="Animation" id="Animation_67mci"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [14]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_dm4t5"]
+_data = {
+&"RESET": SubResource("Animation_67mci")
+}
+
+[sub_resource type="Animation" id="Animation_5vrh0"]
+length = 0.125002
+step = 0.0178571
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0178571, 0.0357143, 0.0535714, 0.0714286, 0.0892857, 0.107143),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [14, 15, 16, 17, 18, 19, 13]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bb2a7"]
+_data = {
+&"Open": SubResource("Animation_5vrh0")
+}
 
 [node name="Locked door" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_pl8yw")
 metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
 
@@ -24,12 +63,21 @@ collision_mask = 4
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
 shape = SubResource("RectangleShape2D_pl8yw")
 
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+y_sort_enabled = true
+scale = Vector2(0.409, 0.409)
+texture = ExtResource("2_pl8yw")
+hframes = 7
+vframes = 3
+frame = 14
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_5vrh0")
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 unique_name_in_owner = true
-scale = Vector2(2.5, 2.5)
-texture = SubResource("AtlasTexture_dm4t5")
-hframes = 3
-frame = 2
+libraries = {
+&"": SubResource("AnimationLibrary_dm4t5"),
+&"Key": SubResource("AnimationLibrary_bb2a7")
+}
