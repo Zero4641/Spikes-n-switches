@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://re5wsdt2h0ms"
+path="res://.godot/imported/Update Chime B.wav-330e8bad9942bfe861868144d6848700.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/SFX/Update Chime B.wav"
+dest_files=["res://.godot/imported/Update Chime B.wav-330e8bad9942bfe861868144d6848700.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

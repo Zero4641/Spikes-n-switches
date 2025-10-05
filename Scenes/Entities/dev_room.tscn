@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://13opbpffw8y"]
+
+[ext_resource type="PackedScene" uid="uid://mkxkmo51qhl0" path="res://Scenes/rooms/dev rooms/test_room1.tscn" id="1_8gjsn"]
+[ext_resource type="Script" uid="uid://dntd017vu7v1m" path="res://Scripts/RoomManager.gd" id="1_c3aie"]
+[ext_resource type="PackedScene" uid="uid://dxbuqwt6sfapc" path="res://Scenes/Entities/player.tscn" id="1_fhg0x"]
+[ext_resource type="Script" uid="uid://os5gecjcr4xy" path="res://Scripts/Transitionlogic.gd" id="2_c3aie"]
+
+[node name="Dev room" type="Node"]
+script = ExtResource("1_c3aie")
+
+[node name="Level container" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("2_c3aie")
+
+[node name="test room 1" parent="Level container" instance=ExtResource("1_8gjsn")]
+
+[node name="Body container" type="Node2D" parent="Level container" groups=["container"]]
+
+[node name="Player" parent="Level container" instance=ExtResource("1_fhg0x")]
+position = Vector2(280, 616)
+motion_mode = 1

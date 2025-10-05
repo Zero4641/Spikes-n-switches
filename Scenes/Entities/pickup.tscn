@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://dfl6wca3lhtfn"]
+
+[ext_resource type="Script" uid="uid://jl00a3flyft3" path="res://Scripts/pickup.gd" id="1_c4cdb"]
+[ext_resource type="Texture2D" uid="uid://cmbgq1x1yq7vi" path="res://Resources/Textures/pickups.png" id="2_c4cdb"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4cdb"]
+size = Vector2(40, 40)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bfbve"]
+size = Vector2(40, 40)
+
+[node name="Pickup" type="Area2D"]
+script = ExtResource("1_c4cdb")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+shape = SubResource("RectangleShape2D_c4cdb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_bfbve")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
+scale = Vector2(0.11, 0.11)
+texture = ExtResource("2_c4cdb")
+hframes = 3
+frame = 1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

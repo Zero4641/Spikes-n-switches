@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://si2f0lydvun7"
+path="res://.godot/imported/Signal Positive JRPG C.wav-451c555396ec43f2f300307c57fcc8e4.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/SFX/Signal Positive JRPG C.wav"
+dest_files=["res://.godot/imported/Signal Positive JRPG C.wav-451c555396ec43f2f300307c57fcc8e4.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
