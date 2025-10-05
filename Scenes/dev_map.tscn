@@ -52,6 +52,7 @@ position = Vector2(5712, -1232)
 
 [node name="room 7" parent="." instance=ExtResource("7_p5o5x")]
 position = Vector2(7616, 0)
+scale = Vector2(0.99429, 1)
 
 [node name="room 8" parent="." instance=ExtResource("8_s5a5p")]
 position = Vector2(5712, 1232)

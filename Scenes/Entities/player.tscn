@@ -557,8 +557,10 @@ script = ExtResource("1_nqm6o")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
 y_sort_enabled = true
+position = Vector2(0, 3)
 scale = Vector2(0.22, 0.22)
 texture = ExtResource("2_qbyki")
+offset = Vector2(1.43051e-06, -159.091)
 hframes = 3
 vframes = 4
 

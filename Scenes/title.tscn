@@ -1,11 +1,17 @@
-[gd_scene load_steps=13 format=3 uid="uid://ybsasd5q2ohc"]
+[gd_scene load_steps=28 format=3 uid="uid://ybsasd5q2ohc"]
 
 [ext_resource type="Script" uid="uid://b5td5bw73snin" path="res://Scripts/title.gd" id="1_yosvi"]
 [ext_resource type="Texture2D" uid="uid://dqu40mo58mmt4" path="res://Resources/Textures/title.png" id="2_2qdx2"]
 [ext_resource type="Texture2D" uid="uid://b5eg381vchlqm" path="res://Resources/Textures/Title_name.png" id="3_3eqdi"]
 [ext_resource type="Texture2D" uid="uid://b8a2smvqg5xs5" path="res://Resources/Textures/Start.png" id="4_yu0ss"]
 [ext_resource type="AudioStream" uid="uid://cwhalpvh3d2uq" path="res://Resources/Audio/Music/Field Day Loop.wav" id="5_6aagf"]
+[ext_resource type="FontFile" uid="uid://cb8l4wfbs26eg" path="res://Resources/Fonts/Crayawn-v58y.ttf" id="5_kyk5u"]
 [ext_resource type="AudioStream" uid="uid://gigorrjxfmf2" path="res://Resources/Audio/SFX/Update Flashlight C.wav" id="6_2qdx2"]
+[ext_resource type="Texture2D" uid="uid://dky1112a135po" path="res://Resources/Textures/cursor.png" id="6_cwqts"]
+[ext_resource type="Texture2D" uid="uid://cpuvgnnxlpoxa" path="res://Resources/Textures/bar.png" id="7_th2ad"]
+[ext_resource type="Texture2D" uid="uid://b245dimkfiql3" path="res://Resources/Textures/ON.png" id="8_cwqts"]
+[ext_resource type="Texture2D" uid="uid://doxokbbit4oc6" path="res://Resources/Textures/OFF.png" id="9_th2ad"]
+[ext_resource type="Texture2D" uid="uid://nhcg4uk4gopw" path="res://Resources/Textures/Mainoptions.png" id="10_th2ad"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kyk5u"]
 atlas = ExtResource("4_yu0ss")
@@ -21,6 +27,37 @@ filter_clip = true
 atlas = ExtResource("4_yu0ss")
 region = Rect2(4, 676, 1340, 307)
 filter_clip = true
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qh4d7"]
+atlas = ExtResource("10_th2ad")
+region = Rect2(4, 18, 1340, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lv7gn"]
+atlas = ExtResource("10_th2ad")
+region = Rect2(4, 346, 1340, 307)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vuho"]
+atlas = ExtResource("10_th2ad")
+region = Rect2(4, 678, 1340, 307)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lv7gn"]
+texture = ExtResource("7_th2ad")
+expand_margin_top = 30.0
+expand_margin_bottom = 30.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_th2ad"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qh4d7"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5vuho"]
+font = ExtResource("5_kyk5u")
+font_size = 120
+outline_size = 10
+outline_color = Color(0, 0, 0, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lv7gn"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vuho"]
 
 [sub_resource type="Animation" id="Animation_qh4d7"]
 resource_name = "Idle"
@@ -41,7 +78,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Start:texture_normal:region")
+tracks/1/path = NodePath("Main/Start:texture_normal:region")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -53,7 +90,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Start:texture_pressed:region")
+tracks/2/path = NodePath("Main/Start:texture_pressed:region")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -65,7 +102,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Start:texture_hover:region")
+tracks/3/path = NodePath("Main/Start:texture_hover:region")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -73,6 +110,42 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
 "update": 1,
 "values": [Rect2(4, 676, 1340, 307), Rect2(1389, 682, 1314, 290), Rect2(2737, 675, 1337, 291), Rect2(4, 676, 1340, 307), Rect2(1389, 682, 1314, 290), Rect2(2737, 675, 1337, 291)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/Options:texture_normal:region")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(4, 18, 1340, 307), Rect2(1389, 24, 1314, 290), Rect2(2739, 17, 1337, 291), Rect2(4, 18, 1340, 307), Rect2(1389, 24, 1314, 290), Rect2(2739, 17, 1337, 291)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/Options:texture_pressed:region")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(4, 346, 1340, 307), Rect2(1389, 352, 1314, 290), Rect2(2739, 345, 1337, 291), Rect2(4, 346, 1340, 307), Rect2(1389, 352, 1314, 290), Rect2(2739, 345, 1337, 291)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/Options:texture_hover:region")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.5, 0.666667, 0.833333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [Rect2(4, 678, 1340, 307), Rect2(1389, 684, 1314, 290), Rect2(2739, 677, 1337, 291), Rect2(4, 678, 1340, 307), Rect2(1389, 684, 1314, 290), Rect2(2739, 677, 1337, 291)]
 }
 
 [sub_resource type="Animation" id="Animation_lv7gn"]
@@ -92,7 +165,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Start:texture_normal:region")
+tracks/1/path = NodePath("Main/Start:texture_normal:region")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -104,7 +177,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Start:texture_pressed:region")
+tracks/2/path = NodePath("Main/Start:texture_pressed:region")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -116,7 +189,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Start:texture_hover:region")
+tracks/3/path = NodePath("Main/Start:texture_hover:region")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -124,6 +197,42 @@ tracks/3/keys = {
 "transitions": PackedFloat32Array(1),
 "update": 0,
 "values": [Rect2(4, 676, 1340, 307)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Main/Options:texture_normal:region")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(4, 18, 1340, 307)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Main/Options:texture_pressed:region")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(4, 346, 1340, 307)]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Main/Options:texture_hover:region")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Rect2(4, 678, 1340, 307)]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_5vuho"]
@@ -140,8 +249,8 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_yosvi")
-metadata/_edit_vertical_guides_ = [952.0]
-metadata/_edit_horizontal_guides_ = [616.0]
+metadata/_edit_vertical_guides_ = [952.0, 224.0, 1680.0, 504.0]
+metadata/_edit_horizontal_guides_ = [616.0, 250.0, 1000.0]
 
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(952, 616)
@@ -149,16 +258,22 @@ texture = ExtResource("2_2qdx2")
 hframes = 5
 vframes = 3
 
-[node name="TitleName" type="Sprite2D" parent="."]
+[node name="Main" type="Control" parent="."]
+visible = false
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="TitleName" type="Sprite2D" parent="Main"]
 position = Vector2(952, 616)
 texture = ExtResource("3_3eqdi")
 
-[node name="Start" type="TextureButton" parent="."]
+[node name="Start" type="TextureButton" parent="Main"]
 layout_mode = 0
-offset_left = 279.0
-offset_top = 462.0
-offset_right = 1619.0
-offset_bottom = 769.0
+offset_left = 280.0
+offset_top = 420.0
+offset_right = 1620.0
+offset_bottom = 727.0
 scale = Vector2(0.35, 0.35)
 pivot_offset = Vector2(674.286, 154.286)
 size_flags_horizontal = 4
@@ -166,6 +281,84 @@ texture_normal = SubResource("AtlasTexture_kyk5u")
 texture_pressed = SubResource("AtlasTexture_cwqts")
 texture_hover = SubResource("AtlasTexture_th2ad")
 stretch_mode = 5
+
+[node name="Options" type="TextureButton" parent="Main"]
+layout_mode = 0
+offset_left = 280.0
+offset_top = 560.0
+offset_right = 1620.0
+offset_bottom = 867.0
+scale = Vector2(0.35, 0.35)
+pivot_offset = Vector2(672, 140)
+texture_normal = SubResource("AtlasTexture_qh4d7")
+texture_pressed = SubResource("AtlasTexture_lv7gn")
+texture_hover = SubResource("AtlasTexture_5vuho")
+
+[node name="Options" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="SFX slider" type="HSlider" parent="Options"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 840.0
+offset_right = 1680.0
+offset_bottom = 930.0
+theme_override_icons/grabber = ExtResource("6_cwqts")
+theme_override_icons/grabber_highlight = ExtResource("6_cwqts")
+theme_override_styles/slider = SubResource("StyleBoxTexture_lv7gn")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_th2ad")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_qh4d7")
+max_value = 2.0
+step = 0.01
+
+[node name="SFX lable" type="Label" parent="Options"]
+layout_mode = 2
+offset_left = 224.0
+offset_top = 728.0
+offset_right = 421.0
+offset_bottom = 837.0
+text = "100%"
+label_settings = SubResource("LabelSettings_5vuho")
+vertical_alignment = 2
+
+[node name="Music slider" type="HSlider" parent="Options"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 504.0
+offset_right = 1680.0
+offset_bottom = 594.0
+theme_override_icons/grabber = ExtResource("6_cwqts")
+theme_override_icons/grabber_highlight = ExtResource("6_cwqts")
+theme_override_styles/slider = SubResource("StyleBoxTexture_lv7gn")
+theme_override_styles/grabber_area = SubResource("StyleBoxEmpty_lv7gn")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxEmpty_5vuho")
+max_value = 2.0
+step = 0.01
+
+[node name="Music lable" type="Label" parent="Options"]
+layout_mode = 2
+offset_left = 224.0
+offset_top = 392.0
+offset_right = 421.0
+offset_bottom = 501.0
+text = "100%"
+label_settings = SubResource("LabelSettings_5vuho")
+
+[node name="Fullscreen" type="CheckButton" parent="Options"]
+layout_mode = 0
+offset_left = 221.0
+offset_top = 251.0
+offset_right = 792.0
+offset_bottom = 377.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("5_kyk5u")
+theme_override_font_sizes/font_size = 130
+theme_override_icons/checked = ExtResource("8_cwqts")
+theme_override_icons/unchecked = ExtResource("9_th2ad")
+text = "Fullscreen"
 
 [node name="FieldDayLoop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_6aagf")
@@ -181,4 +374,8 @@ libraries = {
 }
 autoplay = "Idle"
 
-[connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Main/Options" to="." method="_on_options_pressed"]
+[connection signal="value_changed" from="Options/SFX slider" to="." method="_on_sfx_slider_value_changed"]
+[connection signal="value_changed" from="Options/Music slider" to="." method="_on_music_slider_value_changed"]
+[connection signal="toggled" from="Options/Fullscreen" to="." method="_on_fullscreen_toggled"]

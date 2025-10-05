@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://f0gs7ukwwno1"]
 
 [ext_resource type="Script" uid="uid://da8j7klkpvvx8" path="res://Scripts/Spikes.gd" id="1_urhli"]
-[ext_resource type="Texture2D" uid="uid://d2n0eqjrjyo8e" path="res://Resources/Textures/Tiles.png" id="2_urhli"]
+[ext_resource type="Texture2D" uid="uid://brtlw8w22h8nn" path="res://Resources/Textures/Tiles.png" id="2_urhli"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_urhli"]
 size = Vector2(112, 112)
@@ -9,9 +9,9 @@ size = Vector2(112, 112)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6dr5w"]
 size = Vector2(107, 81)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tfjtd"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_urhli"]
 atlas = ExtResource("2_urhli")
-region = Rect2(963, 1595, 321, 319)
+region = Rect2(960, 1600, 320, 320)
 
 [node name="Spikes" type="Area2D"]
 script = ExtResource("1_urhli")
@@ -30,6 +30,6 @@ shape = SubResource("RectangleShape2D_6dr5w")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(1, 9)
 scale = Vector2(0.35, 0.35)
-texture = SubResource("AtlasTexture_tfjtd")
+texture = SubResource("AtlasTexture_urhli")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

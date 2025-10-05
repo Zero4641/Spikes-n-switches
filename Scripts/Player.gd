@@ -12,6 +12,7 @@ func _unhandled_input(event: InputEvent) -> void:
 		interact.emit(last_faced_direction)
 
 var speed : float = 300
+var sprint : float = 412.5
 var input_dir := Vector2.ZERO
 var can_move := true
 func _physics_process(_delta: float) -> void:
@@ -22,6 +23,9 @@ func _physics_process(_delta: float) -> void:
 	input_dir = input_dir.normalized()
 	
 	velocity = input_dir * speed
+	if Input.is_action_pressed("sprint"):
+		velocity = input_dir * sprint
+	
 	move_and_slide()
 	update_animations()
 
@@ -38,8 +42,10 @@ func update_animations() -> void:
 	
 	if dead:
 		%Sprite2D.texture = Ghost_texture
+		z_index = 1
 	else:
 		%Sprite2D.texture = Blob_texture
+		z_index = 0
 	
 	%AnimationTree.set("parameters/conditions/Idle", Idle)
 	%AnimationTree.set("parameters/conditions/Move", !Idle)
@@ -51,14 +57,16 @@ func update_animations() -> void:
 
 var dead := false
 func die() -> void:
-	dead = true
-	$SignalNegativeJrpgC.play()
-	self.set_collision_mask_value(2, false)
+	if can_move:
+		dead = true
+		$SignalNegativeJrpgC.play()
+		set_collision_mask_value(2, false)
 
 func live() -> void:
-	dead = false
-	$SignalPositiveJrpgC.play()
-	self.set_collision_mask_value(2, true)
+	if can_move:
+		dead = false
+		$SignalPositiveJrpgC.play()
+		set_collision_mask_value(2, true)
 
 func _take_control() -> void:
 	can_move = false

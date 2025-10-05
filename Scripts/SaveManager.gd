@@ -24,7 +24,6 @@ func collect_key(key_id: String) -> void:
 	keys += 1
 	keys_collected[key_id] = true
 	key_collected.emit(keys)
-	print(keys)
 
 func collect_final_key(key_id: String) -> void:
 	final_key = true
@@ -42,3 +41,10 @@ func has_key(key_id: String) -> bool:
 func set_switch_state(next_state) -> void:
 	switch_state = next_state
 	switched_state.emit(switch_state)
+
+func reset() -> void:
+	doors_unlocked = {}
+	keys_collected = {}
+	keys = 0
+	final_key = false
+	switch_state = false

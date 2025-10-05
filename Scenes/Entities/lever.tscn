@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://bjjl5kcidm64d" path="res://Resources/Audio/SFX/Levers C.wav" id="3_e7yxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaom8"]
-size = Vector2(108, 42)
+size = Vector2(108, 5)
 
 [sub_resource type="Animation" id="Animation_eaom8"]
 length = 0.001
@@ -72,16 +72,17 @@ metadata/_custom_type_script = "uid://bvukcfw4jkyqx"
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 unique_name_in_owner = true
-z_index = 1
 y_sort_enabled = true
+position = Vector2(0, 26)
 scale = Vector2(0.234, 0.229)
 texture = ExtResource("2_iyycw")
+offset = Vector2(0, -113.537)
 hframes = 4
 vframes = 4
 frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, 21)
+position = Vector2(0, 22.5)
 shape = SubResource("RectangleShape2D_eaom8")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]

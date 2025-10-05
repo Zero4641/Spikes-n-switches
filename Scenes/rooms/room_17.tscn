@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cr1mlob46wd6c" path="res://Scenes/Entities/lever.tscn" id="7_dr1ml"]
 
 [node name="room 17" type="Node2D"]
+y_sort_enabled = true
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 scale = Vector2(0.35, 0.35)
@@ -16,6 +17,7 @@ tile_map_data = PackedByteArray("AAAAAAAAAAAIAAAAAAAAAAEAAAAIAAEAAAAAAAIAAAAIAAE
 tile_set = ExtResource("1_66yj1")
 
 [node name="TileMapLayer2" type="TileMapLayer" parent="."]
+y_sort_enabled = true
 scale = Vector2(0.35, 0.35)
 tile_map_data = PackedByteArray("AAAGAAEAAAAEAAIAAAAGAAIAAAAEAAIAAAAGAAMAAAAEAAIAAAAGAAQAAAAEAAIAAAAGAAUAAAAEAAIAAAAGAAYAAAAEAAIAAAAFAAYAAAAEAAIAAAAEAAYAAAAEAAIAAAADAAYAAAAEAAIAAAACAAYAAAAEAAIAAAABAAYAAAAEAAIAAAAOAAkAAAAIAAMAAAAPAAIAAAAFAAUAAEALAAEAAAAJAAMAAAACAAEAAAAEAAMAAAACAAkAAAAJAAMAAAAPAAkAAAAFAAMAAAADAAkAAAAFAAMAABAOAAIAAAAFAAQAAEAFAAUAAAAFAAMAAAAMAAgAAAAEAAQAAAAMAAkAAAAEAAUAAAANAAgAAAAFAAQAAAANAAkAAAAFAAUAAAANAAoAAAALAAQAABAMAAoAAAAMAAQAABAOAAEAAAAEAAQAAEAPAAEAAAAEAAUAAEAQAAEAAAALAAAAABAQAAIAAAALAAEAABA=")
 tile_set = ExtResource("1_66yj1")
@@ -58,5 +60,5 @@ position = Vector2(952, 952)
 
 [connection signal="body_entered" from="TileMapLayer3/Spikes" to="TileMapLayer3/Spikes" method="_on_body_entered"]
 [connection signal="body_entered" from="TileMapLayer3/Pickup" to="TileMapLayer3/Pickup" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer3/@Area2D@316927" to="TileMapLayer3/@Area2D@316927" method="_on_body_entered"]
-[connection signal="body_entered" from="TileMapLayer3/@Area2D@316928" to="TileMapLayer3/@Area2D@316928" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer3/@Area2D@259406" to="TileMapLayer3/@Area2D@259406" method="_on_body_entered"]
+[connection signal="body_entered" from="TileMapLayer3/@Area2D@259407" to="TileMapLayer3/@Area2D@259407" method="_on_body_entered"]
