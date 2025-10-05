@@ -5,9 +5,7 @@ var state := false
 var open := false
 func _ready() -> void:
 	on_switch_toggle(SaveManager.switch_state)
-	for child in get_parent().get_children():
-		if (child != self) and child.has_signal("switch_toggle"):
-			child.switch_toggle.connect(on_switch_toggle)
+	SaveManager.switched_state.connect(on_switch_toggle)
 
 func on_switch_toggle(next_state: bool):
 	state = next_state

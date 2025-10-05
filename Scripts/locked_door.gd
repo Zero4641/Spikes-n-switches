@@ -28,9 +28,11 @@ func _on_player_interact(_input_dir:Vector2):
 				SaveManager.set_door_unlocked(door_id, true)
 				set_collision_layer_value(1, false)
 				%AnimationPlayer.play("Key/Final_open")
+				$UpdateChimeB.play()
 		else:
 			if SaveManager.keys > 0:
 				SaveManager.use_key()
 				SaveManager.set_door_unlocked(door_id, true)
 				set_collision_layer_value(1, false)
 				%AnimationPlayer.play("Key/open")
+				$Lock.play()

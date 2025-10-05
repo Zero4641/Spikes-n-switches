@@ -52,10 +52,12 @@ func update_animations() -> void:
 var dead := false
 func die() -> void:
 	dead = true
+	$SignalNegativeJrpgC.play()
 	self.set_collision_mask_value(2, false)
 
 func live() -> void:
 	dead = false
+	$SignalPositiveJrpgC.play()
 	self.set_collision_mask_value(2, true)
 
 func _take_control() -> void:

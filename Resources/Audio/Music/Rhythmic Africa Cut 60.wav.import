@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://bgenacl2jhvff"
+path="res://.godot/imported/Rhythmic Africa Cut 60.wav-dc08f7b99b8fab464ce4b506e5181a1f.sample"
+
+[deps]
+
+source_file="res://Resources/Audio/Music/Rhythmic Africa Cut 60.wav"
+dest_files=["res://.godot/imported/Rhythmic Africa Cut 60.wav-dc08f7b99b8fab464ce4b506e5181a1f.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=2964000
+compress/mode=2

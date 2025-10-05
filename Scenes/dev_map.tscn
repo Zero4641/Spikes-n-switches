@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://bcbe7xshkbja7"]
+[gd_scene load_steps=31 format=3 uid="uid://bcbe7xshkbja7"]
 
 [ext_resource type="PackedScene" uid="uid://hqpx3bfwvv2b" path="res://Scenes/rooms/room_1.tscn" id="1_a3com"]
 [ext_resource type="PackedScene" uid="uid://cb3pxvhel5or6" path="res://Scenes/rooms/room_2.tscn" id="2_toig6"]
@@ -16,6 +16,20 @@
 [ext_resource type="PackedScene" uid="uid://y6mkjatu4q3x" path="res://Scenes/rooms/room_15.tscn" id="13_kcyqx"]
 [ext_resource type="PackedScene" uid="uid://d2ysx3vnmyg52" path="res://Scenes/rooms/room_16.tscn" id="14_03p3m"]
 [ext_resource type="PackedScene" uid="uid://d2l7bt2j14ekl" path="res://Scenes/rooms/room_17.tscn" id="15_rbgtp"]
+[ext_resource type="PackedScene" uid="uid://d3sljgh00ys87" path="res://Scenes/rooms/room_13.tscn" id="17_03p3m"]
+[ext_resource type="PackedScene" uid="uid://dqtujeivsnw6a" path="res://Scenes/rooms/room_18.tscn" id="18_rbgtp"]
+[ext_resource type="PackedScene" uid="uid://cvojlsjnwvcl2" path="res://Scenes/rooms/room_19.tscn" id="19_psk4y"]
+[ext_resource type="PackedScene" uid="uid://cefc3xbel0xl5" path="res://Scenes/rooms/room_20.tscn" id="20_toq0o"]
+[ext_resource type="PackedScene" uid="uid://dud5itkxqhm8s" path="res://Scenes/rooms/room_21.tscn" id="21_eh77m"]
+[ext_resource type="PackedScene" uid="uid://dsn0gloywyo4s" path="res://Scenes/rooms/room_22.tscn" id="22_yq0sa"]
+[ext_resource type="PackedScene" uid="uid://d0d7grqdfrt0t" path="res://Scenes/rooms/room_23.tscn" id="23_xpamk"]
+[ext_resource type="PackedScene" uid="uid://deyamgokbani1" path="res://Scenes/rooms/room_24.tscn" id="24_dodqm"]
+[ext_resource type="PackedScene" uid="uid://b8c004l5w2tam" path="res://Scenes/rooms/room_25.tscn" id="25_tc3nm"]
+[ext_resource type="PackedScene" uid="uid://cjhravdkrrdhc" path="res://Scenes/rooms/room_26.tscn" id="26_toq0o"]
+[ext_resource type="PackedScene" uid="uid://btswrak5mxxi0" path="res://Scenes/rooms/room_27.tscn" id="27_xpamk"]
+[ext_resource type="PackedScene" uid="uid://dqaciceqcjum4" path="res://Scenes/rooms/room_28.tscn" id="28_dodqm"]
+[ext_resource type="PackedScene" uid="uid://bov4l02p6kd71" path="res://Scenes/rooms/room_29.tscn" id="29_tc3nm"]
+[ext_resource type="PackedScene" uid="uid://lxrtk53hci0b" path="res://Scenes/rooms/room_30.tscn" id="30_dodqm"]
 
 [node name="Dev map" type="Node2D"]
 
@@ -54,6 +68,9 @@ position = Vector2(7616, -2464)
 [node name="room 12" parent="." instance=ExtResource("12_l5dh3")]
 position = Vector2(5712, -3696)
 
+[node name="room 13" parent="." instance=ExtResource("17_03p3m")]
+position = Vector2(3808, -2464)
+
 [node name="room 14" parent="." instance=ExtResource("13_03p3m")]
 position = Vector2(9520, -2464)
 
@@ -65,3 +82,42 @@ position = Vector2(11424, -1232)
 
 [node name="room 17" parent="." instance=ExtResource("15_rbgtp")]
 position = Vector2(9520, 0)
+
+[node name="room 18" parent="." instance=ExtResource("18_rbgtp")]
+position = Vector2(1904, -2464)
+
+[node name="room 19" parent="." instance=ExtResource("19_psk4y")]
+position = Vector2(15232, -3696)
+
+[node name="room 20" parent="." instance=ExtResource("20_toq0o")]
+position = Vector2(13328, -3696)
+
+[node name="room 21" parent="." instance=ExtResource("21_eh77m")]
+position = Vector2(13328, -4928)
+
+[node name="room 22" parent="." instance=ExtResource("22_yq0sa")]
+position = Vector2(15232, -4928)
+
+[node name="room 23" parent="." instance=ExtResource("23_xpamk")]
+position = Vector2(17136, -4928)
+
+[node name="room 24" parent="." instance=ExtResource("24_dodqm")]
+position = Vector2(17136, -3696)
+
+[node name="room 25" parent="." instance=ExtResource("25_tc3nm")]
+position = Vector2(17136, -2464)
+
+[node name="room 26" parent="." instance=ExtResource("26_toq0o")]
+position = Vector2(19040, -3696)
+
+[node name="room 27" parent="." instance=ExtResource("27_xpamk")]
+position = Vector2(3808, -3696)
+
+[node name="room 28" parent="." instance=ExtResource("28_dodqm")]
+position = Vector2(3808, -4928)
+
+[node name="room 29" parent="." instance=ExtResource("29_tc3nm")]
+position = Vector2(3808, -6160)
+
+[node name="room 30" parent="." instance=ExtResource("30_dodqm")]
+position = Vector2(19040, -4928)

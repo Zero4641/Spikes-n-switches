@@ -1,7 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://cr1mlob46wd6c"]
+[gd_scene load_steps=9 format=3 uid="uid://cr1mlob46wd6c"]
 
 [ext_resource type="Script" uid="uid://c0jf66661bb3g" path="res://Scripts/Lever.gd" id="1_iyycw"]
 [ext_resource type="Texture2D" uid="uid://cn8qdktw0q6l8" path="res://Resources/Textures/Beta/Lever.png" id="2_iyycw"]
+[ext_resource type="AudioStream" uid="uid://bjjl5kcidm64d" path="res://Resources/Audio/SFX/Levers C.wav" id="3_e7yxl"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eaom8"]
 size = Vector2(108, 42)
@@ -18,24 +19,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [0]
-}
-
-[sub_resource type="Animation" id="Animation_0wja7"]
-resource_name = "flick_off"
-length = 0.208338
-step = 0.0416667
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("Sprite2D:frame")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.0416667, 0.0833333, 0.125, 0.166667),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
-"update": 1,
-"values": [5, 6, 7, 8, 9]
+"values": [4]
 }
 
 [sub_resource type="Animation" id="Animation_e7yxl"]
@@ -53,6 +37,23 @@ tracks/0/keys = {
 "transitions": PackedFloat32Array(1, 1, 1, 1, 1),
 "update": 1,
 "values": [0, 1, 2, 3, 4]
+}
+
+[sub_resource type="Animation" id="Animation_0wja7"]
+resource_name = "flick_off"
+length = 0.208338
+step = 0.0416667
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.0416667, 0.0833333, 0.125, 0.166667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 1,
+"values": [5, 6, 7, 8, 9]
 }
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_qeikp"]
@@ -77,6 +78,7 @@ scale = Vector2(0.234, 0.229)
 texture = ExtResource("2_iyycw")
 hframes = 4
 vframes = 4
+frame = 4
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, 21)
@@ -87,3 +89,7 @@ unique_name_in_owner = true
 libraries = {
 &"": SubResource("AnimationLibrary_qeikp")
 }
+
+[node name="LeversC" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_e7yxl")
+bus = &"SFX"

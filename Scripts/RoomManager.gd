@@ -63,7 +63,7 @@ func load_next_scene() -> void:
 		match status:
 			ResourceLoader.THREAD_LOAD_LOADED:
 				if gameplay:
-					var player_scene = load("res://Scenes/Entites/player.tscn")
+					var player_scene = load("res://Scenes/Entities/player.tscn")
 					player_scene = player_scene.instantiate()
 					%"Level container".add_child(player_scene)
 				for child in %"Level container".get_children():
@@ -94,7 +94,7 @@ func _on_slide_transition_finished():
 	player = null
 
 func set_new_scene() -> void:
-	await %"Level container".fade_in()
+	%"Level container".fade_in()
 	current_scene_path = next_scene_path
 	next_scene_path = ""
 	player_next_start_pos = Vector2.ZERO

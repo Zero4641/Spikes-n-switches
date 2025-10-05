@@ -126,6 +126,7 @@ shape = SubResource("RectangleShape2D_t28ro")
 shape = SubResource("RectangleShape2D_gcodw")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+unique_name_in_owner = true
 scale = Vector2(0.21, 0.21)
 texture = ExtResource("2_t28ro")
 hframes = 6

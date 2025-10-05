@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cbmbqmymb5xgo" path="res://Scripts/Room_transition_trigger.gd" id="1_25rme"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_blr1t"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_25rme"]
 size = Vector2(56, 56)
 
 [node name="Room_transition_trigger" type="Area2D"]
@@ -10,6 +10,4 @@ monitoring = false
 script = ExtResource("1_25rme")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("RectangleShape2D_blr1t")
-
-[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+shape = SubResource("RectangleShape2D_25rme")

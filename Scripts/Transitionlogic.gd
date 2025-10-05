@@ -26,7 +26,7 @@ func fade_in():
 
 func _on_transition_player_animation_finished(anim_name: StringName) -> void:
 	if anim_name == "Fade_out":
-		$"..".load_next_scene()
+		get_tree().current_scene.load_next_scene()
 	elif anim_name == "Fade_in":
 		emit_signal("transition_over")
 

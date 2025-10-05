@@ -9,6 +9,7 @@ var switch_state := false
 signal key_collected(keys:int)
 signal key_used(keys:int)
 signal final_key_collected(final_key:bool)
+signal switched_state(state:bool)
 
 # Set a door's unlocked state
 func set_door_unlocked(door_id: String, unlocked: bool) -> void:
@@ -40,3 +41,4 @@ func has_key(key_id: String) -> bool:
 #toggles switch state
 func set_switch_state(next_state) -> void:
 	switch_state = next_state
+	switched_state.emit(switch_state)

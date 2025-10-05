@@ -1,7 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://c7u5otjn1wwts"]
+[gd_scene load_steps=12 format=3 uid="uid://c7u5otjn1wwts"]
 
 [ext_resource type="Script" uid="uid://gme54osifi0m" path="res://Scripts/locked_door.gd" id="1_pl8yw"]
 [ext_resource type="Texture2D" uid="uid://dn2artdj3is6i" path="res://Resources/Textures/door.png" id="2_pl8yw"]
+[ext_resource type="AudioStream" uid="uid://bl7qp6cb1wl2r" path="res://Resources/Audio/SFX/Lock.wav" id="3_67mci"]
+[ext_resource type="AudioStream" uid="uid://re5wsdt2h0ms" path="res://Resources/Audio/SFX/Update Chime B.wav" id="4_dm4t5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pl8yw"]
 size = Vector2(112, 112)
@@ -100,3 +102,11 @@ libraries = {
 &"": SubResource("AnimationLibrary_dm4t5"),
 &"Key": SubResource("AnimationLibrary_bb2a7")
 }
+
+[node name="Lock" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_67mci")
+bus = &"SFX"
+
+[node name="UpdateChimeB" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dm4t5")
+bus = &"SFX"
