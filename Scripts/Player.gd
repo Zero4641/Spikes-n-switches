@@ -6,6 +6,7 @@ signal interact(interact_dir:Vector2)
 func _ready() -> void:
 	get_parent().connect("transition_start", Callable(self, "_take_control"))
 	get_parent().connect("transition_over", Callable(self, "_return_control"))
+	SaveManager.key_collected.connect(_play_key_get)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact"):
@@ -73,3 +74,6 @@ func _take_control() -> void:
 
 func _return_control() -> void:
 	can_move = true
+
+func _play_key_get(_useless : int) -> void:
+	$"New-notification-013-363676".play()

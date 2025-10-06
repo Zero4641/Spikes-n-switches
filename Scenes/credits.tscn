@@ -1,0 +1,134 @@
+[gd_scene load_steps=10 format=3 uid="uid://cyun8ehxxtrss"]
+
+[ext_resource type="Script" uid="uid://nrug80qa7nfn" path="res://Scripts/credits.gd" id="1_1bamb"]
+[ext_resource type="FontFile" uid="uid://cb8l4wfbs26eg" path="res://Resources/Fonts/Crayawn-v58y.ttf" id="1_gryuy"]
+[ext_resource type="Texture2D" uid="uid://b5eg381vchlqm" path="res://Resources/Textures/Title_name.png" id="1_r18jl"]
+[ext_resource type="Texture2D" uid="uid://ba5x5l68ctf5h" path="res://Resources/Textures/jamsepticeye.png" id="2_xelri"]
+[ext_resource type="AudioStream" uid="uid://cwhalpvh3d2uq" path="res://Resources/Audio/Music/Field Day Loop.wav" id="4_xelri"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_gryuy"]
+font = ExtResource("1_gryuy")
+font_size = 105
+font_color = Color(0, 0, 0, 1)
+outline_size = 10
+
+[sub_resource type="Animation" id="Animation_ccovl"]
+resource_name = "credits roll"
+length = 26.0
+step = 1.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(1, 25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(952, 616), Vector2(952, -4300)]
+}
+
+[sub_resource type="Animation" id="Animation_1bamb"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Node2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(952, 616)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xelri"]
+_data = {
+&"RESET": SubResource("Animation_1bamb"),
+&"credits roll": SubResource("Animation_ccovl")
+}
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1bamb")
+metadata/_edit_horizontal_guides_ = [616.0]
+metadata/_edit_vertical_guides_ = [952.0]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(952, 616)
+
+[node name="Jamsepticeye" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 4821)
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("2_xelri")
+
+[node name="Label" type="Label" parent="Node2D"]
+offset_left = -952.0
+offset_top = 1008.0
+offset_right = 952.0
+offset_bottom = 4767.0
+text = "Game by:
+Chillitch & Zero464
+
+
+
+
+
+Coded by:
+Zero464
+
+
+
+
+
+Art by:
+Chillitch
+
+
+
+
+
+Level design by:
+Zero464
+
+
+
+
+
+Sound and Music sourced by:
+Chillitch
+
+
+
+
+
+
+Game made for:"
+label_settings = SubResource("LabelSettings_gryuy")
+horizontal_alignment = 1
+
+[node name="TitleName" type="Sprite2D" parent="Node2D"]
+position = Vector2(0, 448)
+texture = ExtResource("1_r18jl")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+&"": SubResource("AnimationLibrary_xelri")
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+z_index = -1
+layout_mode = 0
+offset_right = 1904.0
+offset_bottom = 1232.0
+color = Color(0, 0, 0, 1)
+
+[node name="FieldDayLoop" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_xelri")
+volume_db = 10.0
+bus = &"SFX"
+
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_animation_player_animation_finished"]

@@ -93,4 +93,5 @@ libraries = {
 
 [node name="LeversC" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_e7yxl")
+volume_db = 10.0
 bus = &"SFX"

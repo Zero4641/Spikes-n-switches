@@ -1,4 +1,4 @@
-[gd_scene load_steps=54 format=3 uid="uid://dxbuqwt6sfapc"]
+[gd_scene load_steps=55 format=3 uid="uid://dxbuqwt6sfapc"]
 
 [ext_resource type="Script" uid="uid://iqwxue0ol1lf" path="res://Scripts/Player.gd" id="1_nqm6o"]
 [ext_resource type="AudioStream" uid="uid://crnu415ykue4p" path="res://Resources/Audio/SFX/Signal Negative JRPG C.wav" id="2_2hnfo"]
@@ -9,6 +9,7 @@
 [ext_resource type="Script" uid="uid://bmsjwno4omxd7" path="res://Scripts/UI.gd" id="4_yqx0t"]
 [ext_resource type="Texture2D" uid="uid://cmbgq1x1yq7vi" path="res://Resources/Textures/pickups.png" id="5_yqx0t"]
 [ext_resource type="AudioStream" uid="uid://bgenacl2jhvff" path="res://Resources/Audio/Music/Rhythmic Africa Cut 60.wav" id="7_y18yp"]
+[ext_resource type="AudioStream" uid="uid://bdm0m4ke1w3o2" path="res://Resources/Audio/SFX/new-notification-013-363676.mp3" id="10_85s6f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_amhbr"]
 size = Vector2(74, 72)
@@ -638,6 +639,10 @@ bus = &"SFX"
 [node name="SignalPositiveJrpgC" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_y18yp")
 bus = &"Music"
+
+[node name="New-notification-013-363676" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_85s6f")
+bus = &"SFX"
 
 [connection signal="body_entered" from="Interact trigger" to="Interact trigger" method="_on_body_entered"]
 [connection signal="body_exited" from="Interact trigger" to="Interact trigger" method="_on_body_exited"]

@@ -105,6 +105,7 @@ libraries = {
 
 [node name="Lock" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("3_67mci")
+volume_db = 10.0
 bus = &"SFX"
 
 [node name="UpdateChimeB" type="AudioStreamPlayer" parent="."]

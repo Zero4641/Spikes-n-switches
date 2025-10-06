@@ -362,7 +362,8 @@ text = "Fullscreen"
 
 [node name="FieldDayLoop" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("5_6aagf")
-bus = &"Music"
+volume_db = 10.0
+bus = &"SFX"
 
 [node name="UpdateFlashlightC" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_2qdx2")
